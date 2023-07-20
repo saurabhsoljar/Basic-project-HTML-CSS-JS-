@@ -8,6 +8,7 @@
     width: 95%;
     height: 100vh;
     display: flex;
+    text-align: center;
 }
 .quotes{
     /* border: 1px solid black; */
