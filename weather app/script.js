@@ -14,10 +14,9 @@ async function checkWeather(city){
     }else{
         var data = await response.json();
 
-
         document.querySelector(".city").innerHTML = data.name;
         document.querySelector(".temp").innerHTML = Math.round(data.main.temp) + "°c";
-        document.querySelector(".humidity").innerHTML = data.main.humidity + "%" ;
+        document.querySelector(".humidity").innerHTML = data.main.humidity + "%";
         document.querySelector(".wind").innerHTML = data.wind.speed + "km/h";
     
         if(data.weather[0].main=="clouds"){
