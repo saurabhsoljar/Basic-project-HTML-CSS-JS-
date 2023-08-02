@@ -1,13 +1,13 @@
+// script.js
 const notesContainer = document.querySelector(".notes-container");
 const createBtn = document.querySelector(".btn");
-let notes =  document.querySelectorAll(".input-box");
 
-function showNotes(){
+function showNotes() {
     notesContainer.innerHTML = localStorage.getItem("notes");
 }
 showNotes();
 
-function UpdateStroge(){
+function UpdateStroge() {
     localStorage.setItem("notes", notesContainer.innerHTML);
 }
 
@@ -15,22 +15,30 @@ createBtn.addEventListener("click", () => {
     let inputBox = document.createElement("p");
     let img = document.createElement("img");
     inputBox.className = "input-box";
-    inputBox.setAttribute("contenteditable","true");
+    inputBox.setAttribute("contenteditable", "true");
     img.src = "images/delete.png";
     notesContainer.appendChild(inputBox).appendChild(img);
-})
+});
 
-notesContainer.addEventListener("click",function(e){
-    if(e.target.tagName === "IMG"){
+notesContainer.addEventListener("click", function (e) {
+    if (e.target.tagName === "IMG") {
         e.target.parentElement.remove();
         UpdateStroge();
-    }
-    else if(e.target.tagName === "p"){
+    } else if (e.target.tagName === "P") {
         notes = document.querySelectorAll(".input-box");
         notes.forEach(nt => {
-            nt.onkeyup = function(){
+            nt.onkeyup = function () {
                 UpdateStroge();
-            }
-        })
+            };
+        });
     }
-})
+});
+
+document.addEventListener("keydown", event => {
+    if (event.key === "Enter") { // Fixed the typo "Entre" to "Enter"
+        document.execCommand("insertLineBreak");
+        event.preventDefault();
+    }
+});
+
+
