@@ -1,0 +1,45 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(228, 225, 255);
+}
+
+.register .login{
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    box-shadow: 16px 14px 16px rgba(0, 0, 0, 0.1);
+    justify-content: space-between;
+    margin-bottom: 20px;
+    width: 60%;
+    text-align: center;
+    height: 79vh;
+    margin: 5% auto;
+    border-radius: 25px;
+}
+
+.left-side .right-side{
+    flex: 60%;
+    height: 100%;
+} 
+
+.left-side img{
+    width: 50%;
+    height: 50%;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+}
+
+.right-side{
+    flex: 40%;
+    height: fit-content;
+    margin: auto auto;
+    padding: 40px;
+}
+
+.right-side *{
+    margin: 15px;
+}
+
+span{
+    font-size: 40px; ;
+}
