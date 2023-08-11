@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Email Subscribe</title>
+</head>
+<body>
+
+    <div class="hero">
+        <h3>Coming Soon!</h3>
+        <h1>Our Brand New <br>Website Is On Its Way</h1>
+        <p>Subscribe for more details.</p>
+        <form name="submit-to-google-sheet">
+            <input type="email" name="Email" placeholder="your email id" required>
+            <button type="submit"><img src="send-icon.png" width="30px"></button>
+        </form>
+        <span id="msg"></span>
+    </div>
+     
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbzPWfnrl8DYCu7TcbGLxsafdTHSOumFCGMi4neAaOxLEPrju9r7o3dyxAgK_CWyHvX9/exec';
+        const form = document.forms['submit-to-google-sheet'];
+        const msg = document.getElementById("msg");
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault();
+          fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+            .then(response => {
+                if (response.ok) {
+                    msg.innerHTML = "Thank you for Subscribing!";
+                    setTimeout(function(){
+                        msg.innerHTML = " ";
+                    }, 5000);
+                    form.reset();
+                } else {
+                    msg.innerHTML = "Error submitting the form. Please try again later.";
+                }
+            })
+            .catch(error => {
+                msg.innerHTML = "An error occurred. Please try again later.";
+                console.error('Error!', error.message);
+            });
+        });
+    </script>
+</body>
+</html>
