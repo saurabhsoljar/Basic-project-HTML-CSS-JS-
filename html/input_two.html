@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>forms one</title>
+    <style>
+        body{
+            background-color: #414141;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <h1>Forms in HTML</h1>
+        <form action="url" method="GET">
+            <label for="fname">fast name</label>
+            <input type="text"  name="" id="fname" placeholder="first name">
+            <input type="reset" value="reset">
+
+            <select name="editor" id="multiple">
+                <option value="vscode">vscode</option>
+                <option value="sublime">sublime</option>
+            </select>
+
+            <input list="editors" name="editor">
+            <datalist id="editors">
+                <option value="vscode">vscode</option>
+                <option value="sublime">sublime</option>
+            </datalist>
+            <button type="submit">submit </button>
+        </form>
+</body>
+</html>
