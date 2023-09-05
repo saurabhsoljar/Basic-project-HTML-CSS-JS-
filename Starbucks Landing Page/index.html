@@ -3,10 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
     <title>Document</title>
 </head>
 <body>
     <section>
+        <div class="circle"></div>
         <header>
             <a href="#"><img class="logo" src="img/logo.png" alt=""></a>
             <ul>
@@ -16,6 +18,28 @@
                 <li><a href="#">Contact</a></li>
             </ul>
         </header>
+        <div class="content">
+            <div class="textBox">
+                <h2>It's not just Coffee <br>It's <span>Starbucks</span></h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem, illo id repudiandae saepe aut odio, totam quas dicta at vel voluptatum ipsa officiis tenetur cumque libero maxime cum, sequi itaque.</p>
+                <a href="#">Learn More</a>
+            </div>
+            <div class="imgBox">
+                <img class="Starbucks" src="./img/img1.png" alt="">
+            </div>
+        </div>
+        <ul class="thumb">
+            <li><img src="img/thumb1.png" onclick="imgSlider('./img/img1.png');changeCircleColor('#017143')"></li>
+            <li><img src="img/thumb2.png" onclick="imgSlider('./img/img2.png');changeCircleColor('#eb7495')"></li>
+            <li><img src="img/thumb3.png" onclick="imgSlider('./img/img3.png');changeCircleColor('#d752b1')"></li>
+        </ul>
+        <ul class="sci">
+            <li><a href="#"><img src="img/facebook.png" alt=""></a></li>
+            <li><a href="#"><img src="img/twitter.png" alt=""></a></li>
+            <li><a href="#"><img src="img/instagram.png" alt=""></a></li>
+        </ul>
     </section>
+    
+    <script src="./scrtpt.js"></script>
 </body>
 </html>
