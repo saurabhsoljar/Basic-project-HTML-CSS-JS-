@@ -1,35 +1,5 @@
 let shop = document.getElementById('shop')
 
-let shopItemsData = [
-{
-    id:"dsdbskjj",
-    name: "Casual Shirt",
-    price: 45,
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-    img: "images/img-1.jpg"
-},
-{
-    id: "sdhsadusyiu",
-    name: "Offic shirt",
-    price: 100,
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-    img: "images/img-2.jpg"
-},
-{
-    id: "sdhsadutrte",
-    name: "T shirt",
-    price: 25,
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-    img: "images/img-3.jpg"
-},
-{
-    id: "sdhsadutrteewq",
-    name: "Mens Suit",
-    price: 300,
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-    img: "images/img-4.jpg"
-},
-]
 
 shopItemsData.price
 
@@ -77,9 +47,11 @@ let increment = (id) => {
     }else{
         search.item +=1;
     }
-    localStorage.setItem("data",JSON.stringify(basket));
+    
     // console.log(basket);
     update(selectedItem.id);
+
+    localStorage.setItem("data",JSON.stringify(basket));
 }
 let docrement = (id) => {
     let selectedItem = id;
@@ -90,10 +62,13 @@ let docrement = (id) => {
     else{
         search.item -=1;
     }
-    localStorage.setItem("data",JSON.stringify(basket));
+    update(selectedItem.id);
+    basket = basket.filter((x)=>x.item !==0);
 
     //console.log(basket);
-    update(selectedItem.id);
+    
+
+    localStorage.setItem("data",JSON.stringify(basket));
 };
 let update = (id) => {
     let search = basket.find((x) => x.id === id);
@@ -111,4 +86,4 @@ let calculattion = () => {
     cartIcon.innerHTML = basket.map((x) => x.item).reduce((x,y) => x+ y, 0);
 }
 
-calculattion()
+calculattion();
