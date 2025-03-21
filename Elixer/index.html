@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=search" />
+    <title>Elixer</title>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header class="site-header">
+        <div class="header-container">
+            <!-- Logo Section -->
+            <div class="logo-section">
+                <a href="/" class="brand-logo">
+                    <img src="assets/logo.png" alt="Company Logo" class="logo-img">
+                </a>
+            </div>
+    
+            <!-- Search and Tools Section -->
+            <div class="header-middle">
+                <!-- Search Bar -->
+                <div class="search-container">
+                    <form role="search" style="display: flex; width: 100%;">
+                        <input type="search" class="search-input" placeholder="Search..." aria-label="Site search">
+                        <button type="submit" class="search-button">
+                            <span class="material-symbols-outlined">search</span>
+                        </button>
+                    </form>
+                </div>
+    
+                <!-- Calendar -->
+                <div class="calendar-widget">
+                    <button class="calendar-button" aria-label="Open calendar">
+                        <img src="assets/icons8-date-48.png" alt="Calendar">
+                        <span class="current-date" id="currentDate"></span>
+                    </button>
+                </div>
+                
+            </div>
+    
+            <!-- User Section -->
+            <div class="user-section">
+                <!-- Notifications -->
+                <div class="notifications">
+                    <button class="notification-bell" aria-label="Notifications">
+                        <img src="assets/notification.png" alt="Notifications">
+                        <span class="notification-count">3</span>
+                    </button>
+                    <!-- Notification dropdown would go here -->
+                </div>
+    
+                <!-- User Profile -->
+                <div class="user-profile dropdown">
+                    <div class="profile-info">
+                        <img src="user-avatar.jpg" 
+                            alt="User Avatar" 
+                            class="user-avatar">
+                        <div class="user-details">
+                            <span class="user-name">John Doe</span>
+                        </div>
+                    </div>
+                    <!-- Dropdown menu would go here -->
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content" class="main-content" role="main">
+        <section>
+            <div>
+                <h1>Hi, Super Admin</h1>
+            </div>
+        </section>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <img src="assets/location.png" alt="">
+                <p>ACCOMADATION STATUS</p>
+            </div>
+        </section>
+
+        <!-- Chart Section -->
+        <section>
+            <div class="chart-container">
+                <div class="chart-wrapper">
+                    <div id="guestChart"></div>
+                    <p>Guest Houses</p>
+                    <span class="legend">
+                        <span style="color:#1565C0;">● Elixir Hills 3</span>
+                        <span style="color:#FFC107;">● Elixir Woods 3</span>
+                    </span>
+                </div>
+            
+                <div class="chart-wrapper">
+                    <div id="bedroomChart"></div>
+                    <p>Total Bed Rooms</p>
+                    <span class="legend">
+                        <span style="color:#1565C0;">Elixir Hills 40</span>
+                        <span style="color:#FFC107;">Elixir Woods 40</span>
+                    </span>
+                </div>
+            
+                <div class="chart-wrapper">
+                    <div id="occupiedChart"></div>
+                    <p>Occupied Beds</p>
+                    <span class="legend">
+                        <span style="color:#1565C0;">Elixir Hills 50</span>
+                        <span style="color:#FFC107;">Elixir Woods 50</span>
+                    </span>
+                </div>
+            
+                <div class="chart-wrapper">
+                    <div id="availableChart"></div>
+                    <p>Available Beds</p>
+                    <span class="legend">
+                        <span style="color:#1565C0;">Elixir Hills 30</span>
+                        <span style="color:#FFC107;">Elixir Woods 50</span>
+                    </span>
+                </div>
+            </div>
+            
+        </section>
+    </main>
+
+    
+
+
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="script.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,240 @@
+/* styles.css */
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Header styles */
+/* Header Styles */
+.site-header {
+  background: #ffffff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 1rem 0;
+  position: relative;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Logo Section */
+.logo-section {
+  flex: 0 1 200px;
+}
+
+.logo-img {
+  height: 40px;
+  width: auto;
+}
+
+/* Middle Section */
+.header-middle {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex: 1 1 auto;
+  max-width: 600px;
+  margin: 0 2rem;
+}
+
+.search-container {
+  flex: 1;
+  display: flex;
+}
+
+.search-input {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 25px;
+  padding-right: 40px;
+}
+
+.search-button {
+  background: none;
+  border: none;
+  position: relative;
+  right: 35px;
+  top: 2px;
+  cursor: pointer;
+}
+
+/* Calendar Widget */
+.calendar-widget {
+  display: flex;
+  align-items: center;
+}
+
+.calendar-button {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border: none;
+  background-color: #f8f8f8;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.calendar-button img {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+}
+
+.current-date {
+  font-weight: bold;
+}
+/* Hide the default date input */
+.calendar-input {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 150px;
+  border: 1px solid #ccc;
+  padding: 5px;
+  border-radius: 5px;
+  display: none;
+  background-color: white;
+}
+
+/* User Section */
+.user-section {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.notification-bell {
+  position: relative;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.notification-count {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background: red;
+  color: white;
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-size: 0.8rem;
+}
+
+.user-profile {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  cursor: pointer;
+}
+
+.user-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.user-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.user-name {
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.last-login {
+  font-size: 0.8rem;
+  color: #666;
+}
+
+/* Main navigation */
+.main-content {
+  background: rgb(235, 230, 230);
+  padding: 2rem 0;
+  margin-left: 40px;
+  margin-right: 40px;
+}
+.main-nav ul {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+.hero .container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 20px;
+  background: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+}
+.hero .container img {
+  width: 20px;
+  height: 20px;
+}
+.hero .container p {
+  font-size: 10px;
+  font-weight: bold;
+  color: #333;
+}
+.hero .container a {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #007bff;
+  color: #fff;
+  border-radius: 3px;
+  text-decoration: none;
+}
+
+/* charts-container */
+.chart-container {
+    display: flex;
+    justify-content:  space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.chart-wrapper {
+    position: relative;
+    width: 200px;
+    height: 200px;
+}
+
+.chart-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.chart-center img {
+    width: 30px;
+    height: 30px;
+}
+
+.chart-center span {
+    display: block;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+/* Responsive breakpoints */
+@media (max-width: 768px) {
+  .main-nav ul {
+    flex-direction: column;
+  }
+}
