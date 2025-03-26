@@ -199,19 +199,27 @@
 }
 
 /* charts-container */
+/* Container for all charts */
 .chart-container {
     display: flex;
-    justify-content:  space-between;
+    justify-content: space-around;
     align-items: center;
-    padding: 10px;
+    gap: 20px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* Wrapper for each individual chart */
 .chart-wrapper {
     position: relative;
     width: 200px;
     height: 200px;
+    text-align: center;
 }
 
+/* Centered Icon & Number */
 .chart-center {
     position: absolute;
     top: 50%;
@@ -223,13 +231,24 @@
 .chart-center img {
     width: 30px;
     height: 30px;
+    display: block;
+    margin: 0 auto 5px;
 }
 
 .chart-center span {
     display: block;
-    font-size: 20px;
+    font-size: 24px;
     font-weight: bold;
+    color: #000;
 }
+
+/* Chart Titles */
+.chart-wrapper p {
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
 
 
 /* Responsive breakpoints */
